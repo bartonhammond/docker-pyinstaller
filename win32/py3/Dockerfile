@@ -75,6 +75,7 @@ VOLUME /src/
 WORKDIR /wine/drive_c/src/
 RUN mkdir -p /wine/drive_c/tmp
 
+run pip install --upgrade setuptools
 RUN pip install pyinstaller==$PYINSTALLER_VERSION
 
 COPY entrypoint.sh /entrypoint.sh
